@@ -5,8 +5,7 @@ Jahia Source code README
 To build the installer :
 ------------------------
 
-1. checkout.sh/.bat
-2. install.sh/.bat -P installer
+1. install.sh/.bat -P installer
 
 Installer is generated in jahia_pack/package/jahia-installer-package/target/Jahia_xCM*.jar
 
@@ -16,10 +15,9 @@ java -jar jahia_pack/package/jahia-installer-package/target/Jahia_xCM*.jar
 To build and deploy using Maven Jahia Plugin:
 ---------------------------------------------
 
-1. checkout.sh/.bat
-2. Copy and customize the settings in jahia/settings.example.xml into your Maven settings.xml file
-3. install.sh/.bat
-4. deploy.sh/.bat -P LIST_OF_PROFILES_TO_ACTIVATE
-5. configure.sh/.bat -P LIST_OF_PROFILES_TO_ACTIVATE
+1. Copy and customize the settings in jahia/settings.example.xml into your Maven settings.xml file
+2. install.sh/.bat
+3. deploy.sh/.bat -P LIST_OF_PROFILES_TO_ACTIVATE
+4. configure.sh/.bat -P LIST_OF_PROFILES_TO_ACTIVATE
 
 where LIST_OF_PROFILES_TO_ACTIVATE is something like : jahia-tomcat,jahia-mysql
