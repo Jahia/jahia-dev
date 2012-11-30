@@ -45,7 +45,7 @@
     <artifactId>jahia-community-dev-root</artifactId>
     <name>Jahia Community Dev Project Root</name>
     <groupId>org.jahia.server</groupId>
-    <version>6.5.1.0</version>
+    <version>6.6.0.0</version>
     <packaging>pom</packaging>
     <inceptionYear>2004</inceptionYear>
     <organization>
@@ -56,9 +56,9 @@
     <url>http://www.jahia.com</url>
 
     <scm>
-        <connection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/tags/JAHIA_6_5_1_0</connection>
-        <developerConnection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/tags/JAHIA_6_5_1_0</developerConnection>
-        <url>http://subversion.jahia.org/svn/jahia_community_dev/tags/JAHIA_6_5_1_0</url>
+        <connection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/tags/JAHIA_6_6_0_0</connection>
+        <developerConnection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/tags/JAHIA_6_6_0_0</developerConnection>
+        <url>http://subversion.jahia.org/svn/jahia_community_dev/tags/JAHIA_6_6_0_0</url>
     </scm>
 
     <properties>
@@ -135,7 +135,7 @@
                                 </goals>
                                 <configuration>
                                     <checkoutDirectory>jahia</checkoutDirectory>
-                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia/releases/JAHIA_6_5_1_0</connectionUrl>
+                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia/releases/JAHIA_6_6_0_0</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
                                 </configuration>
                             </execution>
@@ -147,7 +147,7 @@
                                 </goals>
                                 <configuration>
                                     <checkoutDirectory>jahia_pack</checkoutDirectory>
-                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia_pack/releases/JAHIA_6_5_1_0</connectionUrl>
+                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia_pack/releases/JAHIA_6_6_0_0</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
                                 </configuration>
                             </execution>
@@ -169,7 +169,7 @@
                 <plugin>
                     <groupId>org.jahia.server</groupId>
                     <artifactId>maven-jahia-plugin</artifactId>
-                    <version>2.53</version>
+                    <version>2.61</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
