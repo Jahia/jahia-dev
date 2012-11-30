@@ -15,9 +15,23 @@ java -jar jahia_pack/package/jahia-installer-package/target/Jahia_xCM*.jar
 To build and deploy using Maven Jahia Plugin:
 ---------------------------------------------
 
-1. Copy and customize the settings in jahia/settings.example.xml into your Maven settings.xml file
+1. Copy and customize the settings in jahia/settings.example.xml into your Maven settings.xml file. Also you might want
+   to check the jahia/README file if you want to learn more about the deployment process.
 2. install.sh/.bat
 3. deploy.sh/.bat -P LIST_OF_PROFILES_TO_ACTIVATE
 4. configure.sh/.bat -P LIST_OF_PROFILES_TO_ACTIVATE
 
 where LIST_OF_PROFILES_TO_ACTIVATE is something like : jahia-tomcat,jahia-mysql
+
+If deploying to Tomcat (default) with the Maven Jahia Plugin:
+-------------------------------------------------------------
+
+1. Make sure that you modify the catalina startup file to include the following lines.
+
+For Windows in the bin/catalina.bat file :
+set CATALINA_OPTS=%CATALINA_OPTS% -Dsun.io.useCanonCaches=false -Xms1024m -Xmx1024m -XX:MaxPermSize=256m -server -Dhibernate.jdbc.use_streams_for_binary=true -verbose:gc -XX:+HeapDumpOnOutOfMemoryError
+
+For Unix/MacOS/Linux in the bin/catalina.sh file:
+CATALINA_OPTS="$CATALINA_OPTS -Xms1024m -Xmx1024m -Djava.awt.headless=true -XX:MaxPermSize=256m -server -Dhibernate.jdbc.use_streams_for_binary=true -verbose:gc -XX:+HeapDumpOnOutOfMemoryError"
+
+2. If you are using Tomcat 7 to deploy, please keep the targetServerVersion at 6 since they are compatible.
