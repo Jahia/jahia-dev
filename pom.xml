@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This file is part of Jahia, next-generation open source CMS:
+    Jahia's next-generation, open source CMS stems from a widely acknowledged vision
+    of enterprise application convergence - web, search, document, social and portal -
+    unified by the simplicity of web content management.
+ 
+    For more information, please visit http://www.jahia.com.
+ 
+    Copyright (C) 2002-2012 Jahia Solutions Group SA. All rights reserved.
+ 
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation; either version 2
+    of the License, or (at your option) any later version.
+ 
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+ 
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ 
+    As a special exception to the terms and conditions of version 2.0 of
+    the GPL (or any later version), you may redistribute this Program in connection
+    with Free/Libre and Open Source Software ("FLOSS") applications as described
+    in Jahia's FLOSS exception. You should have received a copy of the text
+    describing the FLOSS exception, and it is also available here:
+    http://www.jahia.com/license
+ 
+    Commercial and Supported Versions of the program (dual licensing):
+    alternatively, commercial and supported versions of the program may be used
+    in accordance with the terms and conditions contained in a separate
+    written agreement between you and Jahia Solutions Group SA.
+ 
+    If you are unsure which license is appropriate for your use,
+    please contact the sales department at sales@jahia.com.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>jahia-community-dev-root</artifactId>
+    <name>Jahia Community Dev Project Root</name>
+    <groupId>org.jahia.server</groupId>
+    <version>6.7.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <inceptionYear>2004</inceptionYear>
+    <organization>
+        <name>Jahia Solutions Group SA</name>
+        <url>http://www.jahia.com</url>
+    </organization>
+    <description>Jahia Community Development Full Package</description>
+    <url>http://www.jahia.com</url>
+
+    <scm>
+        <connection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/trunk</connection>
+        <developerConnection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/trunk</developerConnection>
+        <url>http://subversion.jahia.org/svn/jahia_community_dev/trunk</url>
+    </scm>
+
+    <properties>
+        <jahia.deploy.targetServerType>tomcat</jahia.deploy.targetServerType>
+        <jahia.deploy.targetServerVersion>7</jahia.deploy.targetServerVersion>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jahia-public</id>
+            <name>Jahia Public Repository</name>
+            <url>https://devtools.jahia.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jahia-public</id>
+            <name>Jahia Public Repository</name>
+            <url>https://devtools.jahia.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <profiles>
+        <profile>
+            <id>checkout</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-scm-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>checkout-jahia</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>checkout</goal>
+                                </goals>
+                                <configuration>
+                                    <checkoutDirectory>jahia</checkoutDirectory>
+                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia/trunk</connectionUrl>
+                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>checkout-jahia-pack</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>checkout</goal>
+                                </goals>
+                                <configuration>
+                                    <checkoutDirectory>jahia_pack</checkoutDirectory>
+                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia_pack/trunk</connectionUrl>
+                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>update</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-scm-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>update-jahia</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>update</goal>
+                                </goals>
+                                <configuration>
+                                    <workingDirectory>jahia</workingDirectory>
+                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia/trunk</connectionUrl>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>update-jahia-pack</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>update</goal>
+                                </goals>
+                                <configuration>
+                                    <workingDirectory>jahia_pack</workingDirectory>
+                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia_pack/trunk</connectionUrl>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <modules>
+        <module>jahia</module>
+        <module>jahia_pack</module>
+    </modules>
+	
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jahia.server</groupId>
+                    <artifactId>jahia-maven-plugin</artifactId>
+                    <version>3.1-SNAPSHOT</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.3</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                    <version>1.6.jahia2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>	 
+</project>
