@@ -1,2 +1,2 @@
 cd jahia
-mvn jahia:configure
+mvn jahia:configure %*

@@ -1,1 +1,1 @@
-mvn jahia:deploy
+mvn jahia:deploy "$@"

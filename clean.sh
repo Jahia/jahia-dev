@@ -1,2 +1,2 @@
-mvn clean
+mvn clean "$@"
 

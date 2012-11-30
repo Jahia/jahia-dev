@@ -1,2 +1,2 @@
-mvn install
+mvn install "$@"
 
