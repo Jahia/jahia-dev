@@ -45,7 +45,7 @@
     <artifactId>jahia-community-dev-root</artifactId>
     <name>Jahia Community Dev Project Root</name>
     <groupId>org.jahia.server</groupId>
-    <version>6.7.0.0-SNAPSHOT</version>
+    <version>6.5.0.0</version>
     <packaging>pom</packaging>
     <inceptionYear>2004</inceptionYear>
     <organization>
@@ -56,17 +56,28 @@
     <url>http://www.jahia.com</url>
 
     <scm>
-        <connection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/trunk</connection>
-        <developerConnection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/trunk</developerConnection>
-        <url>http://subversion.jahia.org/svn/jahia_community_dev/trunk</url>
+        <connection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/tags/JAHIA_6_5_0_0</connection>
+        <developerConnection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/tags/JAHIA_6_5_0_0</developerConnection>
+        <url>http://subversion.jahia.org/svn/jahia_community_dev/tags/JAHIA_6_5_0_0</url>
     </scm>
 
     <properties>
         <jahia.deploy.targetServerType>tomcat</jahia.deploy.targetServerType>
-        <jahia.deploy.targetServerVersion>7</jahia.deploy.targetServerVersion>
+        <jahia.deploy.targetServerVersion>6</jahia.deploy.targetServerVersion>
     </properties>
 
     <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>jahiaRepository</id>
+            <name>Jahia's Maven Repository</name>
+            <url>http://maven.jahia.org/maven2</url>
+        </repository>
         <repository>
             <id>jahia-public</id>
             <name>Jahia Public Repository</name>
@@ -82,6 +93,17 @@
     </repositories>
 
     <pluginRepositories>
+        <pluginRepository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>jahiaRepository</id>
+            <name>Jahia's Maven Repository</name>
+            <url>http://maven.jahia.org/maven2</url>
+        </pluginRepository>
         <pluginRepository>
             <id>jahia-public</id>
             <name>Jahia Public Repository</name>
@@ -113,7 +135,7 @@
                                 </goals>
                                 <configuration>
                                     <checkoutDirectory>jahia</checkoutDirectory>
-                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia/trunk</connectionUrl>
+                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia/releases/JAHIA_6_5_0_0</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
                                 </configuration>
                             </execution>
@@ -125,44 +147,8 @@
                                 </goals>
                                 <configuration>
                                     <checkoutDirectory>jahia_pack</checkoutDirectory>
-                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia_pack/trunk</connectionUrl>
+                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia_pack/releases/JAHIA_6_5_0_0</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <profile>
-            <id>update</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-scm-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>update-jahia</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>update</goal>
-                                </goals>
-                                <configuration>
-                                    <workingDirectory>jahia</workingDirectory>
-                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia/trunk</connectionUrl>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>update-jahia-pack</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>update</goal>
-                                </goals>
-                                <configuration>
-                                    <workingDirectory>jahia_pack</workingDirectory>
-                                    <connectionUrl>scm:svn:http://subversion.jahia.org/svn/jahia_pack/trunk</connectionUrl>
                                 </configuration>
                             </execution>
                         </executions>
@@ -182,8 +168,8 @@
             <plugins>
                 <plugin>
                     <groupId>org.jahia.server</groupId>
-                    <artifactId>jahia-maven-plugin</artifactId>
-                    <version>3.1-SNAPSHOT</version>
+                    <artifactId>maven-jahia-plugin</artifactId>
+                    <version>2.40</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
