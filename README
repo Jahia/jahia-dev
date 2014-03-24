@@ -7,12 +7,12 @@ To build the installer :
 
 1. install.sh/.bat -P installer
 
-Installer is generated in jahia_pack/package/jahia-installer-package/target/Jahia_xCM*.jar
+Installer is generated in jahia_pack/package/jahia-installer-package/target/Jahia-*.jar
 
 You can then launch simply using :
-java -jar jahia_pack/package/jahia-installer-package/target/Jahia_xCM*.jar
+java -jar jahia_pack/package/jahia-installer-package/target/Jahia-*.jar
 
-To build and deploy using Maven Jahia Plugin:
+To build and deploy using Jahia Maven Plugin:
 ---------------------------------------------
 
 1. Copy and customize the settings in jahia/settings.example.xml into your Maven settings.xml file. Also you might want
@@ -23,7 +23,7 @@ To build and deploy using Maven Jahia Plugin:
 
 where LIST_OF_PROFILES_TO_ACTIVATE is something like : jahia-tomcat,jahia-mysql
 
-If deploying to Tomcat (default) with the Maven Jahia Plugin:
+If deploying to Tomcat (default) with the Jahia Maven Plugin:
 -------------------------------------------------------------
 
 1. Make sure that you modify the catalina startup file to include the following lines.
