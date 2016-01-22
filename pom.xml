@@ -62,9 +62,9 @@
     <url>http://www.jahia.com</url>
 
     <scm>
-        <connection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/trunk</connection>
-        <developerConnection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/trunk</developerConnection>
-        <url>http://subversion.jahia.org/svn/jahia_community_dev/trunk</url>
+        <connection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/releases/JAHIA_7_1_1_0</connection>
+        <developerConnection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/releases/JAHIA_7_1_1_0</developerConnection>
+        <url>http://subversion.jahia.org/svn/jahia_community_dev/releases/JAHIA_7_1_1_0</url>
     </scm>
 
     <properties>
