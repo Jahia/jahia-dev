@@ -1,5 +1,5 @@
 
-Jahia Source code README
+Digital Experience Manager Source code README
 ========================
 
 To build the installer :
@@ -7,10 +7,10 @@ To build the installer :
 
 1. install.sh/.bat -P installer
 
-Installer is generated in jahia_pack/package/jahia-installer-package/target/Jahia-*.jar
+Installer is generated in jahia_pack/package/jahia-installer-package/target/DigitalExperienceManager-*.jar
 
 You can then launch simply using :
-java -jar jahia_pack/package/jahia-installer-package/target/Jahia-*.jar
+java -jar jahia_pack/package/jahia-installer-package/target/DigitalExperienceManager-*.jar
 
 To build and deploy using Jahia Maven Plugin:
 ---------------------------------------------
@@ -29,9 +29,7 @@ If deploying to Tomcat (default) with the Jahia Maven Plugin:
 1. Make sure that you modify the catalina startup file to include the following lines.
 
 For Windows in the bin/catalina.bat file :
-set CATALINA_OPTS=%CATALINA_OPTS% -Dsun.io.useCanonCaches=false -Xms1024m -Xmx1024m -XX:MaxPermSize=256m -server -Dhibernate.jdbc.use_streams_for_binary=true -verbose:gc -XX:+HeapDumpOnOutOfMemoryError
+set CATALINA_OPTS=%CATALINA_OPTS% -Dsun.io.useCanonCaches=false -Xms2048m -Xmx2048m -XX:MaxPermSize=312m -server -Dhibernate.jdbc.use_streams_for_binary=true -verbose:gc -XX:+HeapDumpOnOutOfMemoryError
 
 For Unix/MacOS/Linux in the bin/catalina.sh file:
 CATALINA_OPTS="$CATALINA_OPTS -Xms1024m -Xmx1024m -Djava.awt.headless=true -XX:MaxPermSize=256m -server -Dhibernate.jdbc.use_streams_for_binary=true -verbose:gc -XX:+HeapDumpOnOutOfMemoryError"
-
-2. If you are using Tomcat 7 to deploy, please keep the targetServerVersion at 6 since they are compatible.
