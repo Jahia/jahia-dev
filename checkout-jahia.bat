@@ -1,0 +1,1 @@
+mvn -Pcheckout,scm install

@@ -1,0 +1,1 @@
+mvn -Djahia.deploy.deployTests -Pce-deploy jahia:deploy

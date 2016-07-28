@@ -46,31 +46,34 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.jahia</groupId>
+        <artifactId>jahia-parent</artifactId>
+        <version>7.2.0.0-SNAPSHOT</version>
+        <relativePath>jahia-root/jahia-parent/pom.xml</relativePath>
+    </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>jahia-community-dev-root</artifactId>
+    <version>7.2.0.0-SNAPSHOT</version>
     <name>Jahia Community Dev Project Root</name>
     <groupId>org.jahia.server</groupId>
-    <version>7.2.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <description>Jahia Development Full Package</description>
     <inceptionYear>2004</inceptionYear>
     <organization>
         <name>Jahia Solutions Group SA</name>
         <url>http://www.jahia.com</url>
     </organization>
-    <description>Jahia Community Development Full Package</description>
     <url>http://www.jahia.com</url>
 
     <scm>
-        <connection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/trunk</connection>
-        <developerConnection>scm:svn:http://subversion.jahia.org/svn/jahia_community_dev/trunk</developerConnection>
-        <url>http://subversion.jahia.org/svn/jahia_community_dev/trunk</url>
+        <connection>scm:git:git@github.com:Jahia/dxm-dev.git</connection>
+        <developerConnection>scm:git:git@github.com:Jahia/dxm-dev.git</developerConnection>
+        <url>https://github.com/Jahia/dxm-dev</url>
+        <tag>HEAD</tag>
     </scm>
-
-    <properties>
-        <jahia.deploy.targetServerType>tomcat</jahia.deploy.targetServerType>
-    </properties>
-
+ 
     <repositories>
         <repository>
             <id>jahia-public</id>
@@ -101,30 +104,94 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <modules>
-        <module>jahia</module>
-        <module>jahia_pack</module>
-    </modules>
-	
+    <properties>
+        <scm.goal>checkout</scm.goal>
+    </properties>
+
+
+    <profiles>
+        <profile>
+            <id>scm</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-scm-plugin</artifactId>
+
+                        <!-- Jahia core modules -->
+                        <executions>
+                            <execution>
+                                <id>checkout-dxm-private</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>${scm.goal}</goal>
+                                </goals>
+                                <configuration>
+                                    <checkoutDirectory>jahia-root</checkoutDirectory>
+                                    <workingDirectory>jahia-root</workingDirectory>
+                                    <connectionUrl>scm:git:git@github.com:Jahia/dxm.git</connectionUrl>
+                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>checkout-dxm-pack</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>${scm.goal}</goal>
+                                </goals>
+                                <configuration>
+                                    <checkoutDirectory>jahia-pack-root</checkoutDirectory>
+                                    <workingDirectory>jahia-pack-root</workingDirectory>
+                                    <connectionUrl>scm:git:git@github.com:Jahia/dxm-pack.git</connectionUrl>
+                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>            
+            </build>
+        </profile>
+
+        <profile>
+            <id>update</id>
+            <properties>
+                <scm.goal>update</scm.goal>
+            </properties>
+        </profile>
+        <profile>
+            <id>checkout</id>
+            <properties>
+                <scm.goal>checkout</scm.goal>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>ce</id>
+            <modules>
+                <module>jahia-root</module>
+                <module>jahia-pack-root</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>ce-deploy</id>
+            <modules>
+                <module>jahia-root/data</module>
+                <module>jahia-root/war</module>
+                <module>jahia-pack-root</module>
+            </modules>
+        </profile>
+    </profiles>
+
     <build>
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.jahia.server</groupId>
-                    <artifactId>jahia-maven-plugin</artifactId>
-                    <version>4.9</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version>2.3</version>
-                </plugin>
-                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-scm-plugin</artifactId>
-                    <version>1.6.jahia2</version>
+                    <version>1.9.5-jahia1-SNAPSHOT</version>
                 </plugin>
             </plugins>
         </pluginManagement>
-    </build>	 
+    </build>
 </project>
