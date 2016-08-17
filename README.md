@@ -4,7 +4,7 @@ The `dxm-dev` projects helps you to get all projects related to a specific build
 
 Use the following to get the project from the master branch :
 ```
-git clone git@github.com:Jahia/dxm-dev.git dxm-dev
+git clone https://github.com/Jahia/dxm-dev.git dxm-dev
 cd dxm-dev
 ./checkout-all.sh
 ```
