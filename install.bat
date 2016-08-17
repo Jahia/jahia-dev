@@ -1,1 +1,1 @@
-mvn install %*
+mvn -Pce install

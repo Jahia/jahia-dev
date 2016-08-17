@@ -1,1 +1,1 @@
-mvn jahia:deploy %*
+mvn -Pce-deploy jahia:deploy

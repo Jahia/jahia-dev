@@ -1,1 +1,1 @@
-mvn clean %*
+mvn -Pce clean

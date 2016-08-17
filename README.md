@@ -19,13 +19,13 @@ Other scripts are available :
 
 To build the installer :
 
-```install.sh/.bat -P installer```
+```install.sh/.bat installer```
 
 Installer is generated in jahia-pack-root/package/jahia-installer-package/target/DigitalExperienceManager-*.jar
 
 You can then launch simply using :
 
-```java -jar jahia_pack/package/jahia-installer-package/target/DigitalExperienceManager-*.jar```
+```java -jar jahia-pack-root/package/jahia-installer-package/target/DigitalExperienceManager-*.jar```
 
 ### Build and deploy using Jahia Maven Plugin 
 
