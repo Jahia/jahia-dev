@@ -62,14 +62,69 @@ When retrieving updates from remote repositories in order to update your local c
 
 Even if you don't have write access to the repositories, you can still do a Pull Request to propose your patch. You need to create a fork of the repositories you want to change. Once your fork is created, you will use it to push your changes and create the Pull Request. Pull Request generic usage can be seen at : https://help.github.com/articles/using-pull-requests/
 
-On https://github.com/Jahia/dxm (or another repository page), click on "Fork" button on the top-right. 
+On https://github.com/Jahia/dxm (or another repository page), click on "Fork" button on the top-right. Jahia Employees can directly fork -private repositories instead of public mirrors.
 
-Then, add your fork URL to your DXM project. For example, if you forked `dxm`, add the URL in `jahia-root` folder :
+Once you have forked the project, you clone it locally as you would normally do:
 ```
-cd jahia-root
-git remote add fork git@github.com:username/dxm.git
+git clone git@github.com:username/dxm.git
 ```
-For `dxm-pack` or `dxm-pack-private`, add the url in `jahia-pack-root`.
-For `dxm-ee` add the url in `jahia-ee-root`.
+This will create a `dxm` directory on your system.
 
-Create a branch for your fix - if possible, name your branch from the Jira ticket. Commit and push your changes to your branch. Once the fix is ready, create the Pull Request from GitHub.
+Once you have forked and locally cloned the project, you need to tell git about the upstream version of your fork. 
+When you clone a repository locally, git records the remote repository from which the local copy was cloned so that it 
+knows where to fetch and push code. You can retrieve the list of remote repositories your local copy knows about by 
+performing `git remote -v`, which will list the name of known remotes as well as their associated fetch and push 
+URIs (usually, both the same). By default, the remote repository from which you cloned is named `origin`. So, in the 
+above example where you cloned your `dxm` fork, performing `git remote -v` will result in the following result:
+```
+origin	git@github.com:username/dxm.git (fetch)
+origin	git@github.com:username/dxm.git (push)
+```
+
+Since your local repository is a clone of your fork, you need to be able to make sure it is up to date with the 
+latest version of the upstream repository. The way to do this is to tell git about another remote source of code: the
+ upstream repository. As you might have guessed, you do this by adding letting your local copy know about another 
+ remote by performing `git remote add <name of the remote> <uri of the remote>`. With this setup, we recommend using 
+ `upstream` as the remote name for the upstream remote repository, as follows:
+ `git remote add upstream git@github.com:Jahia/dxm.git`. `git remote -v` then produces the following result:
+```
+origin	git@github.com:username/dxm.git (fetch)
+origin	git@github.com:username/dxm.git (push)
+upstream	git@github.com:Jahia/dxm.git (fetch)
+upstream	git@github.com:Jahia/dxm.git (push)
+```
+
+Alternatively, you could rename the upstream version `origin` and rename your fork `fork` by performing:
+```
+git remote rename origin fork;
+git remote rename upstream origin
+```
+
+In the end, it doesn't matter how your remotes are called as long as you know which is which! Remember to perform 
+these operations for each repository you fork and clone locally and for which you want to provide patches. You can 
+read more about remotes and how to work with them at: https://help.github.com/articles/working-with-forks/
+
+In the setup where you fork is called `origin` and the upstream repository is called `upstream`, the process to issue
+a pull request to provide a patch is as follows:
+
+- Create a branch for your fix, naming it after the JIRA ticket associated with the fix if possible, e.g. 
+`git checkout -b QA-1234`
+- Add the necessary code (with tests if possible) and commit it to your branch
+- Make sure your fork and branch is up to date with respect to the latest changes in the upstream version by 
+pulling the latest changes from upstream into your branch:
+```
+git fetch upstream # fetch the latest version of the code from the upstream repository
+git checkout master 
+git merge upstream/master # sync your fork's master with the upstream version (might want to push to origin to update
+ your fork afterwards)
+git checkout QA-1234 # switch to your patch branch
+git merge master # sync changes from master
+```
+- Fix any conflicts
+- Once you're satisfied with your patch, push it to your remote fork: `git push origin QA-1234`. This will create a 
+new `QA-1234` branch in your remote repository (your fork).
+- Go to github and browse the upstream version of the repository you want to provide a patch for. It should detect 
+that you pushed a new branch to your fork and offer you to create a pull request for that change.
+
+You can learn about the process and philosophy behind collaborating via pull requests by reading: 
+https://help.github.com/categories/collaborating-on-projects-using-issues-and-pull-requests/
