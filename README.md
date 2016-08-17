@@ -31,8 +31,8 @@ You can then launch simply using :
 
 1. Copy and customize the settings in `jahia-root/settings.example.xml` into your Maven `settings.xml` file. Also you might want to check the jahia-root/README file if you want to learn more about the deployment process.
 2. `install.sh/.bat`
-3. `deploy.sh/.bat -P LIST_OF_PROFILES_TO_ACTIVATE`
-4. `configure.sh/.bat -P LIST_OF_PROFILES_TO_ACTIVATE`
+3. `deploy.sh/.bat LIST_OF_PROFILES_TO_ACTIVATE`
+4. `mvn jahia:configure -P LIST_OF_PROFILES_TO_ACTIVATE`
 
 where LIST_OF_PROFILES_TO_ACTIVATE is something like : jahia-tomcat,jahia-mysql
 
