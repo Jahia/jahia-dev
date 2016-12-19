@@ -49,13 +49,13 @@
     <parent>
         <groupId>org.jahia</groupId>
         <artifactId>jahia-parent</artifactId>
-        <version>7.2.0.0</version>
+        <version>7.3.0.0-SNAPSHOT</version>
         <relativePath>jahia-root/jahia-parent/pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>jahia-community-dev-root</artifactId>
-    <version>7.2.0.0</version>
+    <version>7.3.0.0-SNAPSHOT</version>
     <name>Jahia Community Dev Project Root</name>
     <groupId>org.jahia.server</groupId>
     <packaging>pom</packaging>
@@ -71,7 +71,7 @@
         <connection>scm:git:https://github.com/Jahia/dxm-dev.git</connection>
         <developerConnection>scm:git:https://github.com/Jahia/dxm-dev.git</developerConnection>
         <url>scm:git:https://github.com/Jahia/dxm-dev</url>
-        <tag>JAHIA_7_2_0_0</tag>
+        <tag>HEAD</tag>
     </scm>
  
     <repositories>
@@ -131,8 +131,6 @@
                                     <workingDirectory>jahia-root</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/dxm.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>JAHIA_7_2_0_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -146,8 +144,6 @@
                                     <workingDirectory>jahia-pack-root</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/dxm-pack.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>JAHIA_7_2_0_0</scmVersion>
                                 </configuration>
                             </execution>
                         </executions>
@@ -176,8 +172,6 @@
                                     <workingDirectory>assets</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/assets.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_3</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -191,8 +185,6 @@
                                     <workingDirectory>channels</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/channels.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_2_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -206,8 +198,6 @@
                                     <workingDirectory>ckeditor</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/ckeditor.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>4_4_5</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -221,8 +211,6 @@
                                     <workingDirectory>contentRetrieval</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/contentRetrieval.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -236,8 +224,6 @@
                                     <workingDirectory>contribute</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/contribute.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -251,8 +237,6 @@
                                     <workingDirectory>default</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/default.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_2_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -266,8 +250,6 @@
                                     <workingDirectory>default-skins</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/default-skins.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -281,8 +263,6 @@
                                     <workingDirectory>siteSettings</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/siteSettings.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_4</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -296,8 +276,6 @@
                                     <workingDirectory>facets</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/facets.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -311,8 +289,6 @@
                                     <workingDirectory>grid</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/grid.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -326,8 +302,6 @@
                                     <workingDirectory>macros</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/macros.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -341,8 +315,6 @@
                                     <workingDirectory>module-manager</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/module-manager.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>1_0_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -356,8 +328,6 @@
                                     <workingDirectory>profile</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/profile.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -371,8 +341,6 @@
                                     <workingDirectory>rolesmanager</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/rolesmanager.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -386,8 +354,6 @@
                                     <workingDirectory>search</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/search.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_2_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -401,8 +367,6 @@
                                     <workingDirectory>seo</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/seo.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -416,8 +380,6 @@
                                     <workingDirectory>serverSettings</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/serverSettings.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>8_0_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -431,8 +393,6 @@
                                     <workingDirectory>skins</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/skins.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -446,8 +406,6 @@
                                     <workingDirectory>tabularList</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/tabularList.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -461,8 +419,6 @@
                                     <workingDirectory>tags</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/tags.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_4</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -476,8 +432,6 @@
                                     <workingDirectory>tasks</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/tasks.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -491,8 +445,6 @@
                                     <workingDirectory>templates-system</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/templates-system.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>8_0_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -506,8 +458,6 @@
                                     <workingDirectory>visibility</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/visibility.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -521,8 +471,6 @@
                                     <workingDirectory>translation</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/translation.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -536,8 +484,6 @@
                                     <workingDirectory>jquery</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/jquery.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -551,8 +497,6 @@
                                     <workingDirectory>userDashboard</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/userDashboard.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>7_1_5</scmVersion>
                                 </configuration>
                             </execution>
 
@@ -570,8 +514,6 @@
                                     <workingDirectory>article</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/article.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -585,8 +527,6 @@
                                     <workingDirectory>bookmarks</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/bookmarks.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_1_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -600,8 +540,6 @@
                                     <workingDirectory>calendar</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/calendar.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_3</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -615,8 +553,6 @@
                                     <workingDirectory>contact</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/contact.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -630,8 +566,6 @@
                                     <workingDirectory>docConverter</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/docConverter.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_4</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -645,8 +579,6 @@
                                     <workingDirectory>dx-base-demo-components</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/dx-base-demo-components.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>1_0_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -660,8 +592,6 @@
                                     <workingDirectory>dx-base-demo-core</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/dx-base-demo-core.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>1_0_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -675,8 +605,6 @@
                                     <workingDirectory>dx-base-demo-templates</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/dx-base-demo-templates.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>1_0_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -690,8 +618,6 @@
                                     <workingDirectory>event</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/event.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -705,8 +631,6 @@
                                     <workingDirectory>external-provider</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/external-provider.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_1_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -720,11 +644,9 @@
                                     <workingDirectory>external-provider-users-groups</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/external-provider-users-groups.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>1_1_0</scmVersion>
                                 </configuration>
                             </execution>
-                            <execution>
+                <execution>
                                 <id>checkout-users-groups-bridge-provider</id>
                                 <phase>generate-sources</phase>
                                 <goals>
@@ -735,8 +657,6 @@
                                     <workingDirectory>users-groups-bridge-provider</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/Jahia-Users-and-Groups-Bridge-Provider.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>1_0_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -750,8 +670,6 @@
                                     <workingDirectory>faq</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/faq.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -765,8 +683,6 @@
                                     <workingDirectory>font-awesome</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/font-awesome.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>4.6.3</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -780,8 +696,6 @@
                                     <workingDirectory>formbuilder</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/formbuilder.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_0_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -795,8 +709,6 @@
                                     <workingDirectory>googleAnalytics</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/googleAnalytics.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -810,8 +722,6 @@
                                     <workingDirectory>jaxrs-osgi-extender</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/jaxrs-osgi-extender.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_3</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -825,8 +735,6 @@
                                     <workingDirectory>jcrestapi</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/jcrestapi.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_3_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -840,8 +748,6 @@
                                     <workingDirectory>jcr-webdav</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/jcr-webdav.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>1_0_1</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -855,8 +761,6 @@
                                     <workingDirectory>job</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/job.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -870,8 +774,6 @@
                                     <workingDirectory>location</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/location.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_3</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -885,8 +787,6 @@
                                     <workingDirectory>news</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/news.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_3</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -900,8 +800,6 @@
                                     <workingDirectory>person</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/person.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -915,8 +813,6 @@
                                     <workingDirectory>poll</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/poll.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -930,8 +826,6 @@
                                     <workingDirectory>press</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/press.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -945,8 +839,6 @@
                                     <workingDirectory>publication</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/publication.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -960,8 +852,6 @@
                                     <workingDirectory>rating</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/rating.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -975,8 +865,6 @@
                                     <workingDirectory>rss</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/rss.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_4</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -990,8 +878,6 @@
                                     <workingDirectory>sitemap</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/sitemap.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_4</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1005,8 +891,6 @@
                                     <workingDirectory>socialsharing</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/socialsharing.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1020,8 +904,6 @@
                                     <workingDirectory>staticHTML</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/staticHTML.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1035,8 +917,6 @@
                                     <workingDirectory>summary</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/summary.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1050,8 +930,6 @@
                                     <workingDirectory>teasers</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/teasers.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_3</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1065,8 +943,6 @@
                                     <workingDirectory>tools</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/tools.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_1_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1080,8 +956,6 @@
                                     <workingDirectory>topstories</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/topstories.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1095,8 +969,6 @@
                                     <workingDirectory>translateworkflow</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/translationworkflow.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_4</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1110,8 +982,6 @@
                                     <workingDirectory>twitter</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/twitter.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1125,8 +995,6 @@
                                     <workingDirectory>userregistration</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/userregistration.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_5</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1140,8 +1008,6 @@
                                     <workingDirectory>videostreaming</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/videostreaming.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1155,8 +1021,6 @@
                                     <workingDirectory>webClipping</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/webClipping.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_3</scmVersion>
                                 </configuration>
                             </execution>
         <!-- end of Jahia Forge Modules -->
@@ -1173,8 +1037,6 @@
                                     <workingDirectory>ldap</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/LDAP-provider.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_1_0</scmVersion>
                                 </configuration>
                             </execution>
 
@@ -1191,8 +1053,6 @@
                                     <workingDirectory>acme-space-elektra</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/acme-space-elektra.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_5</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1206,8 +1066,6 @@
                                     <workingDirectory>digitall</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/digitall.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>1_0_2</scmVersion>
                                 </configuration>
                             </execution>
 
@@ -1223,8 +1081,6 @@
                                     <workingDirectory>blog</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/JahiApp-Blog.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_1_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1238,8 +1094,6 @@
                                     <workingDirectory>forum</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/JahiApp-Forum.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_1_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1253,8 +1107,6 @@
                                     <workingDirectory>newsletter</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/JahiApp-Newsletter.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_1_0</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1268,8 +1120,6 @@
                                     <workingDirectory>wiki</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/JahiApp-Wiki.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_1_0</scmVersion>
                                 </configuration>
                             </execution>
 
@@ -1286,8 +1136,6 @@
                                     <workingDirectory>gateway</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/gateway.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1301,12 +1149,10 @@
                                     <workingDirectory>jahia-document-management-root</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/document-management.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_6</scmVersion>
                                 </configuration>
                             </execution>
         <!-- Bootstrap -->
-                            <execution>
+                           <execution>
                                 <id>checkout-sample-bootstrap-templates</id>
                                 <phase>generate-sources</phase>
                                 <goals>
@@ -1317,11 +1163,9 @@
                                     <workingDirectory>sample-bootstrap-templates</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/sample-bootstrap-templates.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_0_3</scmVersion>
                                 </configuration>
                             </execution>
-                            <execution>
+                           <execution>
                                 <id>checkout-bootstrap-acme-space-templates</id>
                                 <phase>generate-sources</phase>
                                 <goals>
@@ -1332,8 +1176,6 @@
                                     <workingDirectory>bootstrap-acme-space-templates</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/bootstrap-acme-space-templates.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_0_5</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1347,8 +1189,6 @@
                                     <workingDirectory>bootstrap-components</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/bootstrap-components.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_0_2</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1362,8 +1202,6 @@
                                     <workingDirectory>bootstrap</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/bootstrap.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>2_0_3</scmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -1377,8 +1215,6 @@
                                     <workingDirectory>bootstrap3</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/bootstrap3.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                    <scmVersionType>tag</scmVersionType>
-                                    <scmVersion>3_5_0</scmVersion>
                                 </configuration>
                             </execution>
 
