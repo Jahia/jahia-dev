@@ -1372,6 +1372,9 @@
                 <module>calendar</module>
                 <module>contact</module>
                 <module>docConverter</module>
+				<module>dx-base-demo-components</module>
+				<module>dx-base-demo-core</module>
+				<module>dx-base-demo-templates</module>
                 <module>event</module>
                 <module>external-provider</module>
                 <module>faq</module>
