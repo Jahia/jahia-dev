@@ -7,7 +7,7 @@
 
                                     http://www.jahia.com
 
-        Copyright (C) 2002-2016 Jahia Solutions Group SA. All rights reserved.
+        Copyright (C) 2002-2017 Jahia Solutions Group SA. All rights reserved.
 
         THIS FILE IS AVAILABLE UNDER TWO DIFFERENT LICENSES:
         1/GPL OR 2/JSEL
@@ -73,7 +73,7 @@
         <url>scm:git:https://github.com/Jahia/dxm-dev</url>
         <tag>HEAD</tag>
     </scm>
- 
+
     <repositories>
         <repository>
             <id>jahia-public</id>
@@ -148,7 +148,7 @@
                             </execution>
                         </executions>
                     </plugin>
-                </plugins>            
+                </plugins>
             </build>
         </profile>
         <profile>
@@ -1218,9 +1218,9 @@
                 <module>calendar</module>
                 <module>contact</module>
                 <module>docConverter</module>
-				<module>dx-base-demo-components</module>
-				<module>dx-base-demo-core</module>
-				<module>dx-base-demo-templates</module>
+                <module>dx-base-demo-components</module>
+                <module>dx-base-demo-core</module>
+                <module>dx-base-demo-templates</module>
                 <module>event</module>
                 <module>external-provider</module>
                 <module>faq</module>
