@@ -128,3 +128,8 @@ that you pushed a new branch to your fork and offer you to create a pull request
 
 You can learn about the process and philosophy behind collaborating via pull requests by reading: 
 https://help.github.com/categories/collaborating-on-projects-using-issues-and-pull-requests/
+
+
+## Tested With
+
+[<img src="https://cloud.githubusercontent.com/assets/7864462/12837037/452a17c6-cb73-11e5-9f39-fc96893bc9bf.png" alt="Browser Stack Logo" width="300">](https://www.browserstack.com/)
