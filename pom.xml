@@ -49,13 +49,13 @@
     <parent>
         <groupId>org.jahia</groupId>
         <artifactId>jahia-parent</artifactId>
-        <version>7.2.1.0</version>
+        <version>7.2.2.0-SNAPSHOT</version>
         <relativePath>jahia-root/jahia-parent/pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>jahia-community-dev-root</artifactId>
-    <version>7.2.1.0</version>
+    <version>7.2.2.0-SNAPSHOT</version>
     <name>Jahia Community Dev Project Root</name>
     <groupId>org.jahia.server</groupId>
     <packaging>pom</packaging>
