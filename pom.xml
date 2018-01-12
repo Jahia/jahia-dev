@@ -461,19 +461,6 @@
                                 </configuration>
                             </execution>
                             <execution>
-                                <id>checkout-translation</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>${scm.goal}</goal>
-                                </goals>
-                                <configuration>
-                                    <checkoutDirectory>translation</checkoutDirectory>
-                                    <workingDirectory>translation</workingDirectory>
-                                    <connectionUrl>scm:git:https://github.com/Jahia/translation.git</connectionUrl>
-                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                </configuration>
-                            </execution>
-                            <execution>
                                 <id>checkout-jquery</id>
                                 <phase>generate-sources</phase>
                                 <goals>
@@ -868,19 +855,6 @@
                                 </configuration>
                             </execution>
                             <execution>
-                                <id>checkout-sitemap</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>${scm.goal}</goal>
-                                </goals>
-                                <configuration>
-                                    <checkoutDirectory>sitemap</checkoutDirectory>
-                                    <workingDirectory>sitemap</workingDirectory>
-                                    <connectionUrl>scm:git:https://github.com/Jahia/sitemap.git</connectionUrl>
-                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                </configuration>
-                            </execution>
-                            <execution>
                                 <id>checkout-socialsharing</id>
                                 <phase>generate-sources</phase>
                                 <goals>
@@ -890,19 +864,6 @@
                                     <checkoutDirectory>socialsharing</checkoutDirectory>
                                     <workingDirectory>socialsharing</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/socialsharing.git</connectionUrl>
-                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>checkout-staticHTML</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>${scm.goal}</goal>
-                                </goals>
-                                <configuration>
-                                    <checkoutDirectory>staticHTML</checkoutDirectory>
-                                    <workingDirectory>staticHTML</workingDirectory>
-                                    <connectionUrl>scm:git:https://github.com/Jahia/staticHTML.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
                                 </configuration>
                             </execution>
@@ -972,19 +933,6 @@
                                 </configuration>
                             </execution>
                             <execution>
-                                <id>checkout-twitter</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>${scm.goal}</goal>
-                                </goals>
-                                <configuration>
-                                    <checkoutDirectory>twitter</checkoutDirectory>
-                                    <workingDirectory>twitter</workingDirectory>
-                                    <connectionUrl>scm:git:https://github.com/Jahia/twitter.git</connectionUrl>
-                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                </configuration>
-                            </execution>
-                            <execution>
                                 <id>checkout-userregistration</id>
                                 <phase>generate-sources</phase>
                                 <goals>
@@ -1007,19 +955,6 @@
                                     <checkoutDirectory>videostreaming</checkoutDirectory>
                                     <workingDirectory>videostreaming</workingDirectory>
                                     <connectionUrl>scm:git:https://github.com/Jahia/videostreaming.git</connectionUrl>
-                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>checkout-webClipping</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>${scm.goal}</goal>
-                                </goals>
-                                <configuration>
-                                    <checkoutDirectory>webClipping</checkoutDirectory>
-                                    <workingDirectory>webClipping</workingDirectory>
-                                    <connectionUrl>scm:git:https://github.com/Jahia/webClipping.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
                                 </configuration>
                             </execution>
@@ -1084,19 +1019,6 @@
                                 </configuration>
                             </execution>
                             <execution>
-                                <id>checkout-newsletter</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>${scm.goal}</goal>
-                                </goals>
-                                <configuration>
-                                    <checkoutDirectory>newsletter</checkoutDirectory>
-                                    <workingDirectory>newsletter</workingDirectory>
-                                    <connectionUrl>scm:git:https://github.com/Jahia/JahiApp-Newsletter.git</connectionUrl>
-                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                </configuration>
-                            </execution>
-                            <execution>
                                 <id>checkout-wiki</id>
                                 <phase>generate-sources</phase>
                                 <goals>
@@ -1112,19 +1034,6 @@
 
 
         <!-- Document Management -->
-                            <execution>
-                                <id>checkout-Gateway</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>${scm.goal}</goal>
-                                </goals>
-                                <configuration>
-                                    <checkoutDirectory>gateway</checkoutDirectory>
-                                    <workingDirectory>gateway</workingDirectory>
-                                    <connectionUrl>scm:git:https://github.com/Jahia/gateway.git</connectionUrl>
-                                    <skipCheckoutIfExists>true</skipCheckoutIfExists>
-                                </configuration>
-                            </execution>
                             <execution>
                                 <id>checkout-document-management</id>
                                 <phase>generate-sources</phase>
@@ -1210,7 +1119,6 @@
                 <module>tasks</module>
                 <module>templates-system</module>
                 <module>visibility</module>
-                <module>translation</module>
                 <module>jquery</module>
                 <module>userDashboard</module>
                 <module>article</module>
@@ -1237,26 +1145,20 @@
                 <module>publication</module>
                 <module>rating</module>
                 <module>rss</module>
-                <module>sitemap</module>
                 <module>socialsharing</module>
-                <module>staticHTML</module>
                 <module>summary</module>
                 <module>teasers</module>
                 <module>topstories</module>
                 <module>translateworkflow</module>
-                <module>twitter</module>
                 <module>userregistration</module>
                 <module>videostreaming</module>
-                <module>webClipping</module>
 
                 <module>ldap</module>
 
-                <module>gateway</module>
                 <module>jahia-document-management-root</module>
 
                 <module>blog</module>
                 <module>forum</module>
-                <module>newsletter</module>
                 <module>wiki</module>
 
                 <module>digiatall</module>
@@ -1300,7 +1202,6 @@
                 <module>tasks</module>
                 <module>templates-system</module>
                 <module>visibility</module>
-                <module>translation</module>
                 <module>jquery</module>
                 <module>userDashboard</module>
             </modules>
