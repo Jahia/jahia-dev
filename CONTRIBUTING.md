@@ -1,7 +1,7 @@
 # Contributing
 
-Jahia respect some rules before committing. If your are in the company, you must respect those rules.
-If your are a generous contributor, you are encourage to follow those rules, but every help is accepted.
+Jahia respect some rules before committing. If your are in the company, you must respect these rules.
+If your are a generous contributor, you are encouraged to follow those rules, but every help is accepted.
 
 
 - [Development Flow](#development-flow)
@@ -11,9 +11,9 @@ If your are a generous contributor, you are encourage to follow those rules, but
 
 ## <a name="development-flow"></a> Development flow
 
-Each product of Jahia released have his own lifecycle. Each release have a maintenance lifecycle too.
+Each released Jahia product has its own lifecycle. Each release has a maintenance lifecycle too.
 
-In order to simplify, the release process we respect the [Trunk Based Git Flow](https://trunkbaseddevelopment.com/).
+In order to simplify, the release process we use respects the [Trunk Based Git Flow](https://trunkbaseddevelopment.com/).
 
 The main branch on each of Jaha's reposirory is named *master*. This is our trunk.
 
@@ -22,7 +22,7 @@ The main branch on each of Jaha's reposirory is named *master*. This is our trun
 
 ### Pull request
 
-As team at Jahia is composed of more than tow people and as Trunk Based documentation say, you cannot directly push commit to *master* branch. You have to create a branch, code by respecting [Coding Rules](#rules), [Commit](#commit) and push. At this point, your code will be reviewed by an employee of Jahia.
+As team at Jahia is composed of more than two people, as Trunk Based documentation say, you cannot directly push commit to *master* branch. You have to create a branch, code by respecting [Coding Rules](#rules), [Commit](#commit) and push. At this point, your code will be reviewed by an employee of Jahia.
 
 In case of fixes requested by the reviewer, you should:
 
@@ -49,10 +49,11 @@ Each Release should start by creating a branch named according to the release ve
 
 A git tag should be created as well with the same name plus the PATCH version in it.
 
-If a fixe have to be done, you have to reproduce it on the master branch, fix it, then do the pull request.
+If a fix has to be done, you have to reproduce it on the master branch, fix it, then do the pull request. If the fix cannot be done on master, because the code has been refactored, the fix can be done directly on the release branch.
 
 After the fix is on the master branch you can cherry-pick the commit to the release branch and release the fix to a previous version.
 
+We usually have at most two major releases branches maintained at the same time. In case we have two branches, fixes will be cherry-picked on both branches. 
 
 ##  <a name="rules"></a> Coding Rules
 
@@ -92,13 +93,13 @@ The *subject* contains a succinct description of the change:
 #### Samples
 
 ```
-BACKLOG-10153: Handle simple click in image picker
+BACKLOG-10153: handle simple click in image picker
 ```
 
 or with more details:
 
 ```
-BACKLOG-10153: Handle simple click in image picker
+BACKLOG-10153: handle simple click in image picker
 
 Handle simple click meant to add the selectable variant to Card in the design system
 ```
