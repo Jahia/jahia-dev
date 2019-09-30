@@ -49,13 +49,13 @@
     <parent>
         <groupId>org.jahia</groupId>
         <artifactId>jahia-parent</artifactId>
-        <version>7.4.0.0-SNAPSHOT</version>
+        <version>7.3.3.0-SNAPSHOT</version>
         <relativePath>jahia-root/jahia-parent/pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>jahia-community-dev-root</artifactId>
-    <version>7.4.0.0-SNAPSHOT</version>
+    <version>7.3.3.0-SNAPSHOT</version>
     <name>Jahia Community Dev Project Root</name>
     <groupId>org.jahia.server</groupId>
     <packaging>pom</packaging>
@@ -68,9 +68,9 @@
     <url>http://www.jahia.com</url>
 
     <scm>
-        <connection>scm:git:https://github.com/Jahia/dxm-dev.git</connection>
-        <developerConnection>scm:git:https://github.com/Jahia/dxm-dev.git</developerConnection>
-        <url>scm:git:https://github.com/Jahia/dxm-dev</url>
+        <connection>scm:git:https://github.com/Jahia/jahia-dev.git</connection>
+        <developerConnection>scm:git:https://github.com/Jahia/jahia-dev.git</developerConnection>
+        <url>scm:git:https://github.com/Jahia/jahia-dev</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -129,7 +129,7 @@
                                 <configuration>
                                     <checkoutDirectory>jahia-root</checkoutDirectory>
                                     <workingDirectory>jahia-root</workingDirectory>
-                                    <connectionUrl>scm:git:https://github.com/Jahia/dxm.git</connectionUrl>
+                                    <connectionUrl>scm:git:https://github.com/Jahia/jahia.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
                                 </configuration>
                             </execution>
@@ -142,7 +142,7 @@
                                 <configuration>
                                     <checkoutDirectory>jahia-pack-root</checkoutDirectory>
                                     <workingDirectory>jahia-pack-root</workingDirectory>
-                                    <connectionUrl>scm:git:https://github.com/Jahia/dxm-pack.git</connectionUrl>
+                                    <connectionUrl>scm:git:https://github.com/Jahia/jahia-pack.git</connectionUrl>
                                     <skipCheckoutIfExists>true</skipCheckoutIfExists>
                                 </configuration>
                             </execution>
