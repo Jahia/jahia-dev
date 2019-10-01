@@ -1,11 +1,11 @@
 # Development environment
 
-The `dxm-dev` projects helps you to get all projects related to a specific build of DXM. This project contains references to the correct repository URLs and branches, and will checkout all modules packaged in the standard DXM distribution.
+The `jahia-dev` projects helps you to get all projects related to a specific build of DXM. This project contains references to the correct repository URLs and branches, and will checkout all modules packaged in the standard DXM distribution.
 
 Use the following to get the project from the master branch :
 ```
-git clone https://github.com/Jahia/dxm-dev.git dxm-dev
-cd dxm-dev
+git clone https://github.com/Jahia/jahia-dev.git jahia-dev
+cd jahia-dev
 ./checkout-all.sh
 ```
 Note that cloning DXM repository can be quite long.
@@ -52,33 +52,33 @@ When retrieving updates from remote repositories in order to update your local c
 
 ## Notes on project naming
 
-`dxm` is the public repository for DXM Core. 
+`jahia` is the public repository for DXM Core. 
 
-`dxm-pack` is the public repository for core packaging project. 
+`jahia-pack` is the public repository for core packaging project. 
 
-`dxm-dev` is the development environment project for community.
+`jahia-dev` is the development environment project for community.
 
 ## Proposing a patch to the DXM Core team
 
 Even if you don't have write access to the repositories, you can still do a Pull Request to propose your patch. You need to create a fork of the repositories you want to change. Once your fork is created, you will use it to push your changes and create the Pull Request. Pull Request generic usage can be seen at : https://help.github.com/articles/using-pull-requests/
 
-On https://github.com/Jahia/dxm (or another repository page), click on "Fork" button on the top-right. Jahia Employees can directly fork -private repositories instead of public mirrors.
+On https://github.com/Jahia/jahia (or another repository page), click on "Fork" button on the top-right. Jahia Employees can directly fork -private repositories instead of public mirrors.
 
 Once you have forked the project, you clone it locally as you would normally do:
 ```
-git clone git@github.com:username/dxm.git
+git clone git@github.com:username/jahia.git
 ```
-This will create a `dxm` directory on your system.
+This will create a `jahia` directory on your system.
 
 Once you have forked and locally cloned the project, you need to tell git about the upstream version of your fork. 
 When you clone a repository locally, git records the remote repository from which the local copy was cloned so that it 
 knows where to fetch and push code. You can retrieve the list of remote repositories your local copy knows about by 
 performing `git remote -v`, which will list the name of known remotes as well as their associated fetch and push 
 URIs (usually, both the same). By default, the remote repository from which you cloned is named `origin`. So, in the 
-above example where you cloned your `dxm` fork, performing `git remote -v` will result in the following result:
+above example where you cloned your `jahia` fork, performing `git remote -v` will result in the following result:
 ```
-origin	git@github.com:username/dxm.git (fetch)
-origin	git@github.com:username/dxm.git (push)
+origin	git@github.com:username/jahia.git (fetch)
+origin	git@github.com:username/jahia.git (push)
 ```
 
 Since your local repository is a clone of your fork, you need to be able to make sure it is up to date with the 
@@ -86,12 +86,12 @@ latest version of the upstream repository. The way to do this is to tell git abo
  upstream repository. As you might have guessed, you do this by adding letting your local copy know about another 
  remote by performing `git remote add <name of the remote> <uri of the remote>`. With this setup, we recommend using 
  `upstream` as the remote name for the upstream remote repository, as follows:
- `git remote add upstream git@github.com:Jahia/dxm.git`. `git remote -v` then produces the following result:
+ `git remote add upstream git@github.com:Jahia/jahia.git`. `git remote -v` then produces the following result:
 ```
-origin	git@github.com:username/dxm.git (fetch)
-origin	git@github.com:username/dxm.git (push)
-upstream	git@github.com:Jahia/dxm.git (fetch)
-upstream	git@github.com:Jahia/dxm.git (push)
+origin	git@github.com:username/jahia.git (fetch)
+origin	git@github.com:username/jahia.git (push)
+upstream	git@github.com:Jahia/jahia.git (fetch)
+upstream	git@github.com:Jahia/jahia.git (push)
 ```
 
 Alternatively, you could rename the upstream version `origin` and rename your fork `fork` by performing:
